@@ -2,28 +2,35 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use App\Models\Paket;
 use App\Models\Pesanan;
+use Barryvdh\DomPDF\PDF;
 use Illuminate\Http\Request;
 
 class LaundryController extends Controller
 {
-    function paket() {
+    function paket()
+    {
         $pakets = Paket::all();
         return view('paket', compact('pakets'));
     }
 
-    function kasir(Paket $paket) {
-        return view('inputkasir', compact('paket'));
+    function kasir(Paket $paket)
+    {
+        $customers = Customer::all();
+        return view('inputkasir', compact('paket', 'customers'));
     }
 
-    function invoice(int $id) {
+    function invoice(int $id)
+    {
         $pesanan = Pesanan::find($id);
-    
+
         return view('invoice', compact('pesanan'));
     }
 
-    function pesanan(Request $request) {
+    function pesanan(Request $request)
+    {
         $data = $request->validate([
             'idCustomer' => 'required',
             'paket' => 'required',
@@ -47,4 +54,7 @@ class LaundryController extends Controller
 
         return redirect()->route('invoice', ['id' => $pesanan->id]);
     }
+    
+
+    
 }

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Customer;
 use App\Models\Paket;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -50,6 +51,17 @@ class DatabaseSeeder extends Seeder
             'service1' => 'Estimasi 2-3 hari',
             'service2' => 'Inlcude Delivery',
             'service3' => 'Inlude Pewangi',
+        ]);
+
+        Customer::create([
+            'idCustomer' => 'laravel01',
+            'nama' => 'laravel',
+            'alamat' => 'asdsadsgslg'
+        ]);
+        Customer::create([
+            'idCustomer' => 'laravel02',
+            'nama' => 'laravel2',
+            'alamat' => 'asdsadsgslg'
         ]);
     }
 }

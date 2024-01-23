@@ -13,13 +13,11 @@
     @include('layouts.nav')
     <div class="container">
         @yield('container')    
+
     </div>    
 
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('js/jquery.js') }}"></script>
-    {{-- <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
-    <script>
-        new DataTable('#example');
-    </script> --}}
 </body>
 </html>

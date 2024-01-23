@@ -21,3 +21,6 @@ Route::get('/pilih-paket', [LaundryController::class, 'paket'])->name('paket');
 Route::get('/input-kasir/{paket}', [LaundryController::class, 'kasir'])->name('kasir');
 Route::post('/konfirmasi-pesanan', [LaundryController::class, 'pesanan'])->name('pesanan');
 Route::get('/invoice/{id}', [LaundryController::class, 'invoice'])->name('invoice');
+// Route::get('/generate-pdf', [LaundryController::class, 'generatePDF'])->name('generatePDF');
+Route::get('/search-customers', [LaundryController::class, 'searchCustomers']);
+
