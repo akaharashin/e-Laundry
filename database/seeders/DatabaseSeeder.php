@@ -28,25 +28,25 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Paket::create([
-            'namaPaket' => 'Paket A',
-            'descPaket' => 'Paket A ini adalah paket untuk jasa cuci saja, tidak termasuk setrika',
-            'PricePaket' => '15.000 ',
+            'nama' => 'Paket A',
+            'desc' => 'Paket A ini adalah paket untuk jasa cuci saja, tidak termasuk setrika',
+            'harga' => 15000 ,
             'service1' => 'Estimasi 2-3 hari',
             'service2' => 'Pelayanan Super Cepat',
             'service3' => 'Dijamin bersih dan wangi',
         ]);
         Paket::create([
-            'namaPaket' => 'Paket B',
-            'descPaket' => 'Berbeda dengan paket A, Paket B ini untuk jasa cuci include dengan setrika',
-            'PricePaket' => '20.000 ',
+            'nama' => 'Paket B',
+            'desc' => 'Berbeda dengan paket A, Paket B ini untuk jasa cuci include dengan setrika',
+            'harga' => 20000,
             'service1' => 'Estimasi 3-5 Hari',
             'service2' => 'Include setrika',
             'service3' => 'Dijamin wangi dan rapi',
         ]);
         Paket::create([
-            'namaPaket' => 'Paket C',
-            'descPaket' => 'Ini adalah paket cuci untuk barang berat seperti Karpet, Selimut, Bedcover dll.',
-            'PricePaket' => '30.000 ',
+            'nama' => 'Paket C',
+            'desc' => 'Ini adalah paket cuci untuk barang berat seperti Karpet, Selimut, Bedcover dll.',
+            'harga' => 30000 ,
             'service1' => 'Estimasi 2-3 hari',
             'service2' => 'Inlcude Delivery',
             'service3' => 'Inlude Pewangi',

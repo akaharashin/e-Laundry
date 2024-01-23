@@ -132,11 +132,11 @@
         <div class="inner">
             <span class="pricing">
                 <span>
-                    Rp. {{ $paket->pricePaket }} <small>/ kg</small>
+                    Rp. {{ number_format($paket->harga, 0, ',' , '.')  }} <small>/ kg</small>
                 </span>
             </span>
-            <p class="title">{{ $paket->namaPaket }}</p>
-            <p class="info">{{ $paket->descPaket }}</p>
+            <p class="title">{{ $paket->nama }}</p>
+            <p class="info">{{ $paket->desc }}</p>
             <ul class="features">
                 <li>
                     <span class="icon">

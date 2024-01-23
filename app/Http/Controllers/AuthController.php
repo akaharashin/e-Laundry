@@ -18,7 +18,7 @@ class AuthController extends Controller
         ]);
 
         Auth::attempt($kasir);
-
+        
         return redirect()->route('paket');
     }
 }
