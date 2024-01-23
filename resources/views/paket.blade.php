@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <h3>{{ $paket->nama }}</h3>
                     <p class="card-text">{{ $paket->desc }}</p>
-                    <p class="card-text fs-6">Rp.{{ number_format($paket->harga, 0, ',' , '.') }}</p>
+                    <p class="card-text fs-6">Rp.{{ number_format($paket->harga, 0, ',' , '.') }} /kg</p>
                     <ul class="list-group">
                         <li class="list-group-item">{{ $paket->service1 }}</li>
                         <li class="list-group-item">{{ $paket->service2 }}</li>
