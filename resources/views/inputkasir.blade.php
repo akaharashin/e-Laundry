@@ -1,5 +1,7 @@
 @extends('layouts.layout')
 
+@section('title', 'Input Pesanan')
+
 @section('container')
 <form action="{{ route('pesanan') }}" method="POST">
     @csrf

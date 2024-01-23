@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function index() {
+    public function showLogin() {
         return view('auth.login');
     }
 
@@ -20,5 +20,10 @@ class AuthController extends Controller
         Auth::attempt($kasir);
         
         return redirect()->route('paket');
+    }
+
+    function logout() {
+        auth()->logout();
+        return redirect()->route('showLogin');
     }
 }

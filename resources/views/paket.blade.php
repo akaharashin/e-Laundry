@@ -1,5 +1,6 @@
 @extends('layouts.layout')
-
+@section('title', 'Pilih Paket')
+    
 @section('container')
 <div class="container mt-5">
     <div class="row">

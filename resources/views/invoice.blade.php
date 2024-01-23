@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('title', 'invoice')
+@section('title', 'Invoice')
 
 @section('container')
     <div class="card col-5 mx-auto mt-5">
