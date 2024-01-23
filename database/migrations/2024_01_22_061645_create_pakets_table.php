@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('pakets', function (Blueprint $table) {
             $table->id();
-            $table->string('namaPaket');
-            $table->string('descPaket');
-            $table->string('pricePaket');
+            $table->string('nama');
+            $table->string('desc');
+            $table->integer('harga');
             $table->string('service1');
             $table->string('service2');
             $table->string('service3');

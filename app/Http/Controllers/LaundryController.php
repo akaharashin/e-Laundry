@@ -27,6 +27,7 @@ class LaundryController extends Controller
         $data = $request->validate([
             'idCustomer' => 'required',
             'paket' => 'required',
+            'harga' => 'required',
             'berat' => 'required',
             'notelp' => 'required',
             'alamat' => 'required',
@@ -34,17 +35,11 @@ class LaundryController extends Controller
         ]);
 
 
-        $price = [
-            'PaketA' => 15000,
-            'PaketB' => 20000,
-            'PaketC' => 30000,
-        ];
-
-
         $pesanan = Pesanan::create([
             'idCustomer' => $request->idCustomer,
             'paket' => $request->paket,
-            'berat' => $request->berat * $price['PaketA'],
+            'berat' => $request->berat,
+            'harga' => $request->harga * $request->berat,
             'notelp' => $request->notelp,
             'alamat' => $request->alamat,
             'catatan' => $request->catatan,
